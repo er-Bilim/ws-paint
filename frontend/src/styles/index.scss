@@ -1,0 +1,52 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: $font-main;
+  font-optical-sizing: auto;
+  letter-spacing: $space-xs;
+  background: $grey-50;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:active {
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+*::-webkit-scrollbar {
+  width: 5px;
+}
+
+*::-webkit-scrollbar-track {
+  background: $grey-900;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: $pink-500;
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: $pink-500;
+}
+
+::selection {
+  background-color: $pink-500;
+  color: $grey-50;
+}
