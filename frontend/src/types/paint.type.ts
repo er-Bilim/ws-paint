@@ -1,9 +1,9 @@
-export interface IPainPixel {
+export interface IPaintPixel {
   x: number;
   y: number;
 }
 
 export interface IIncomingDataPaint {
   type: 'DRAW' | 'CANVAS' | 'BROADCAST_DRAW';
-  payload: IPainPixel | IPainPixel[];
+  payload: IPaintPixel | IPaintPixel[];
 }

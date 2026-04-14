@@ -90,6 +90,9 @@ const Canvas = () => {
   };
 
   const stopDrawing = () => {
+    if (!contextRef.current) return;
+
+    contextRef.current.closePath();
     setIsDrawing(false);
   };
 
