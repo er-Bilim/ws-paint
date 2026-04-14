@@ -1,14 +1,16 @@
 import { WebSocketServer } from 'ws';
 import http from 'http';
 import registerHandlersWebsocket from './handlers/paintHandler.ts';
+import WebSocket from 'ws';
+
+const connectedClients: WebSocket[] = [];
 
 const registerWebsocket = (server: http.Server) => {
   const wss = new WebSocketServer({ server });
 
   wss.on('connection', (ws) => {
-    console.log('New client connected!');
-
-    registerHandlersWebsocket(ws);
+    connectedClients.push(ws);
+    registerHandlersWebsocket(ws, wss.clients);
   });
 };
 

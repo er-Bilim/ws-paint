@@ -1,10 +1,9 @@
 export interface IIncomingDataPaint {
   type: 'DRAW' | 'CANVAS' | 'BROADCAST_DRAW';
-  payload: ICoordinates[]
-
+  payload: IPainPixel[] | IPainPixel;
 }
 
-export interface ICoordinates {
+export interface IPainPixel {
   x: number;
   y: number;
 }
